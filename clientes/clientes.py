@@ -28,7 +28,6 @@ def modificar_cliente(dato=0):
     titulo="Modificar Cliente"
     bandera=False
     datos=search(tabla="cliente", id_search="id_cli",id=dato)
-    print(datos)
     try:
         if request.method == 'POST':
             id_cli=request.form['id_cli']
@@ -67,12 +66,12 @@ def buscar_cliente():
     try:
         if request.method == 'POST':
             prod = request.form.get('buscar_cli')
-            print(prod)
             dato=search(tabla="cliente", id_search="id_cli",id=prod)
-            print(dato)
-            if dato != "":
-                bandera=True
+            if dato :
                 return redirect(f'/clientes/modificar-cliente/{prod}')
+            else:
+                bandera=True
+                return render_template('search_cli.html', titulo=titulo, bandera=bandera)
     except Exception:
         abort(404)
     return render_template('search_cli.html', titulo=titulo, bandera=bandera)

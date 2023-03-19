@@ -6,6 +6,10 @@
        
     </header>
     {% block body %}
+    {% if bandera == True %}
+    <script>alert('Vendedor No existe')</script>
+    {% endif %}
+    
     <div class="fondo_factu">
         <h1 style="color: white; text-align: center;">{{_('BUSCAR VENDEDOR')}}</h1>
         <br>

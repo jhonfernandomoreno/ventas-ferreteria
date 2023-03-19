@@ -67,9 +67,11 @@ def buscar_ven():
             print(prod)
             dato=search(tabla="vendedor", id_search="id_ven",id=prod)
             print(dato)
-            if dato != "":
-                bandera=True
+            if dato :
                 return redirect(f'/vendedor/modificar-vendedor/{prod}')
+            else:
+                bandera=True
+                return render_template('search_ven.html', titulo=titulo, bandera=bandera)
     except Exception:
         abort(404)
     return render_template('search_ven.html', titulo=titulo, bandera=bandera)

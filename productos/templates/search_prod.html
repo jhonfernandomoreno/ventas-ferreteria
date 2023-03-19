@@ -6,6 +6,9 @@
        
     </header>
     {% block body %}
+    {% if bandera == True %}
+    <script>alert('Producto No existe')</script>
+    {% endif %}
     <div class="fondo_factu">
         <h1 style="color: white; text-align: center;">{{_('BUSCAR PRODUCTO')}}</h1>
         <br>

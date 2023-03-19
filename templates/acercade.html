@@ -1,11 +1,17 @@
 {% extends 'layout.html' %}
+
 <head>
     {% block head %}<link rel="stylesheet" href={{url_for('static', filename='css/styleacercade.css')}}>{% endblock head %}<link rel="stylesheet" href={{url_for('static', filename='css/style.css')}}>
+    {% block title %} ACERCA DE {% endblock title %}
 </head>
 <body>
     <header>
+        {% if session['rol']=='admin' %}
         {% include 'navbar.html' %}
-        {% block title %} ACERCA DE {% endblock title %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+        
     </header>
     {% block body %}
     <div class="acerca_de">
