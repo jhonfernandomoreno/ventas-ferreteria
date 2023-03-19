@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}error{% endblock title %}
+<body>
+    <header>
+        {% include 'navbar.html' %}
+        
+    </header>
+    {% block body %}
+        <div class="error">
+            <h1 class="error_1">Ups!!!<br>Error<br>404</h1>
+        </div>
+    {% endblock body %}
+</body>
+{% block footer %}{% endblock %}

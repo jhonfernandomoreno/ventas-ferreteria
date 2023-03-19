@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block title %} TRABAJADORES {% endblock title %}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+        
+    </header>
+    {% block body %}
+    <div class="fondo_agregar_tra">
+        <h1 style="color: beige; text-align: center;">{{_('AGREGAR TRABAJADORES')}}</h1>
+        <br>
+        <br>
+        <div class="container">
+            <form method="post" action="">
+                <table class="table">
+                    <tr>
+                        <td style="color: white;">{{_('Cedula')}}</td>
+                        <td><input type="text" name="id_ven" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Nombre')}}</td>
+                        <td><input type="number" name="nom_ven" min="0" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Apellido')}}</td>
+                        <td><input type="text" name="ape_ven" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Dirección')}}</td>
+                        <td><input type="text" name="dir_ven" class="form-control"></td>
+                    </tr>
+        
+                    <tr>
+                        <td style="color: white;">{{_('Telefono')}}</td>
+                        <td><input type="number" name="tel_ven" min="0" class="form-control"></td>
+                    </tr>
+        
+                    <tr>
+                        <td >
+                            <input type="submit" name="submit" value="{{_('Agregar')}}" class="btn btn-success">
+                        </td>
+                        <td style="text-align: right;">
+                            <a class="btn btn-danger" href="/vendedor" role="button">{{_('Atras')}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    {% endblock body %}
+</body>

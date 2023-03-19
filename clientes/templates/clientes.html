@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+        {% block title %} CLIENTES {% endblock title %}
+    </header>
+    {% block body %}
+    <div class="fondo_cliente">
+        <h1 style="color: white; text-align: center;">{{_('CLIENTES')}}</h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-3">
+            <div class="card" style="width: 18rem; margin-right: 20px; background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="/static/img/c_1.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/clientes/agregar-cliente" class="card-link" style="color: black; text-decoration: none;">{{_('AGREGAR')}}</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-3">
+            <div class="card" style="width: 18rem; margin-right: 20px;background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="/static/img/c_2.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/cliente/buscar-cliente" class="card-link" style="color: black; text-decoration: none;">{{_('MODIFICAR')}}</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-3">
+            <div class="card" style="width: 18rem; margin-right: 20px;background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="/static/img/c_3.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/clientes/listar-cliente" class="card-link" style="color: black; text-decoration: none;">{{_('LISTAR')}}</a>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    {% endblock body %}
+</body>
+{% block footer %}{% endblock %}

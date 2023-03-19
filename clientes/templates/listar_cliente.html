@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block title %}{{titulo}}{% endblock title %}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+    </header>
+    {% block body %}
+    <div class="fondo_lista_tra">
+        <h1 style="color: beige; text-align: center;">{{_('LISTA DE CLIENTES')}}</h1>
+        <div class="container">
+            <br>    
+            <table class="table table-dark table-striped table-bordered" id="example">
+                <thead style="background-color: orange; color: rgb(255, 255, 255);">
+                    <th>{{_('Cedula')}}</th>
+                    <th>{{_('Nombre')}}</th>
+                    <th>{{_('Dirección')}}</th>
+                    <th>{{_('Telefono')}}</th>
+                    <th>{{_('Opción')}}</th>
+                </thead>
+                
+                <tbody>
+                    {% for fila in dato %}
+                    <tr>
+                        {% for elem in fila %}
+                        <td>{{elem}}</td>
+                        {% endfor %}
+                        <td>
+                            <span style="font-size: 24px; margin-right: 20px;">
+                                <a style="color: blue;" href=""> <i class="fas fa-edit"></i> </a>
+                            </span>
+        
+                            <span style="font-size: 24px;">
+                                <a  style="color: orangered;" href=""> <i class="fas fa-trash-alt"></i> </a>
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  
+                  <li class="page-item"><a class="page-link" href="/clientes/listar-cliente/0">1</a></li>
+                  <li class="page-item"><a class="page-link" href="/clientes/listar-cliente/1">2</a></li>
+                  <li class="page-item"><a class="page-link" href="/clientes/listar-cliente/2">3</a></li>
+                  <li class="page-item"><a class="page-link" href="/clientes/listar-cliente/3">4</a></li>
+                
+                </ul>
+            </nav>
+            <br>
+            <div class="posicion">
+                <a href="/clientes" class="button_atras">{{_('Atras')}}</a>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% endblock body %}
+</body>

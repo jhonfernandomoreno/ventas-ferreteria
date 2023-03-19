@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+<head>
+    {% block head %}<link rel="stylesheet" href={{url_for('static', filename='css/styleacercade.css')}}>{% endblock head %}<link rel="stylesheet" href={{url_for('static', filename='css/style.css')}}>
+</head>
+<body>
+    <header>
+        {% include 'navbar.html' %}
+        {% block title %} ACERCA DE {% endblock title %}
+    </header>
+    {% block body %}
+    <div class="acerca_de">
+        <div class="card">
+            <div class="circle" style="--clr:#FD972B">
+                <img src="/static/img/logo1.png" class="logo">
+            </div>
+            <div class="tex">
+                <h4>CONSTRUYE FACIL</h4>
+                <p>UNIVERSIDAD DE NARINO</p>
+                <P>IPIALES</P>
+                <P><b>Integrantes: Jhon Moreno - Cristian Ordoñez</b></P>
+                <p>2022 - 2023</p>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+</body>
+{% block footer %}{% endblock %}

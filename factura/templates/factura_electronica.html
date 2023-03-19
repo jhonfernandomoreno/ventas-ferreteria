@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+{% block title %} FACTURACION ELECTRONICA {% endblock title %}
+
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+    </header>
+    {% block body %}
+    <div class="fondo_factu_elec">
+        <h1 style="color: white; text-align: center;">{{_('FACTURACIÓN ELECTRONICA')}}</h1>
+        <br>
+            <section class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">{{_('CONSTRUYE FACIL')}}</h2>
+                            <form class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="">{{_('No. de Factura:')}}</label>
+                                    <input type="text" id="inputNoFactu" class="form-control" placeholder="Ejem: 001"/>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="">{{_('Fecha')}}:</label>
+                                    <input type="date" id="inputfecha" class="form-control" value="{{fecha['anio']}}-{{fecha['mes']}}-{{fecha['dia']}}">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body">
+                            <form class="row">
+                                <div class="form-group col-md-8">
+                                    <label for="">{{_('Cliente:')}}</label>
+                                    <input type="text" id="inputnombre" class="form-control" placeholder="Cliente" value="{{cliente[0][1]}}" disabled=True/>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="">{{_('Dirección:')}}</label>
+                                    <input type="text"  id="inputdireccion" class="form-control" placeholder="Ejem:B/ la paz" value="{{cliente[0][2]}}" disabled=True/>
+                                </div>   
+                                <div class="form-group col-md-4">
+                                    <label for="">{{_('Telefono:')}}</label>
+                                    <input type="text" id="inputtelefono" class="form-control" placeholder="Ejem: 31323233323" value="{{cliente[0][3]}}" disabled=True/>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="">{{_('Cedula:')}}</label>
+                                    <input type="text" id="inputcedula" class="form-control" placeholder="Ejem: 98899989" value="{{cliente[0][0]}}" disabled=True/>
+                                </div>                             
+                            </form>
+                        </div>
+                        <div class="card-header">
+                            <form class="row" id="formDetalle" style="margin-block-end: 0;">
+                                <div class="form-group col-md-3" style="margin-bottom: 0;"> 
+                                    <label for="">{{_('Cantidad:')}}</label>
+                                    <input type="number" id="inputcantidad" class="form-control" min="0" value="1"/>
+                                </div>
+                                <div class="form-group col-md-5" style="margin-bottom: 0;">
+                                    <label for="">{{_('Codigo:')}}</label>
+                                    <input type="text" id="inputcodigo" class="form-control" placeholder="Ejem: 0001" min="0"/>
+                                </div>    
+                                <div class="form-group col-md-1" style="margin-bottom: 0; display: flex; align-items: center;">
+                                    <button class="btn btn-primary" type="submit" >+</button>
+                                </div>                             
+                            </form>
+                        </div>
+                        <br>
+                        <div class="col-4">
+                            <button class="btn btn-dark btn-lg" type="submit" onclick="enviardata()">{{_('Finalizar Compra')}}</button>
+                        </div>
+                        
+                        <div class="card-body">
+                            <table class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>{{_('Cantidad')}}</th>
+                                        <th>{{_('Descripción')}}</th>
+                                        <th>{{_('Val. Unitario')}}</th>
+                                        <th>{{_('Total')}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpotabla">
+                                    
+                                </tbody>
+                                
+                            </table>
+                            <div style="text-align: right;" id="divtotal">
+                                <b>{{_('Valor Total')}}</b> <input type="number" id="totalfin" value=0  style="text-align: right; width: 17%;" disabled></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+    </div>
+    <script src="{{url_for('static' ,filename='js/factura/index.js')}}"> </script>
+    {% endblock body %}
+    
+</body>
+{% block footer %}{% endblock %}

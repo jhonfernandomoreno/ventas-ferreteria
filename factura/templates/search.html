@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+<title>{% block title %} {{titulo}} {% endblock title %}</title>
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+       
+    </header>
+    {% block body %}
+    <div class="fondo_factu">
+        <h1 style="color: white; text-align: center;">{{_('BUSCAR CLIENTE')}}</h1>
+        <br>
+        <div class="row justify-content-center">
+        <div class="col">
+            <form action="" method="POST" onsubmit="return validarCampo()">
+                <div class="card" style="width: 18rem; background-color: rgb(221, 221, 221);">
+                    <img class="card-img-top" src="/static/img/c_1.png" alt="Card image cap">
+                    <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                      <div class="buscar">
+                        <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" placeholder="Buscar" id="mibuscar" name="buscar_cli">
+                            </div>
+                        <span class="clear" onclick="document.getElementById('mibuscar').value=''"></span>
+                      </div>
+                      <script>
+                        const icon=document.querySelector('.icon');
+                        const buscar=document.querySelector('.buscar');
+                        icon.onclick=function(){
+                            buscar.classList.toggle('active')
+                        }
+                      </script>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="{{_('Buscar')}}" name="submit">
+                </div>
+            </form>
+        </div>    
+        </div>
+    </div>
+    <script src="{{url_for('static', filename="js/funciones.js")}}"></script>
+    {% endblock body %}
+</body>
+{% block footer %}{% endblock %}

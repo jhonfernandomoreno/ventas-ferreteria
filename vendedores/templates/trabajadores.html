@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block title %}{{titulo}}{% endblock title %}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+        
+    </header>
+    {% block body %}
+    <div class="fondo_trabajadores">
+        <h1 style="color: white; text-align: center;">{{_('TRABAJADORES')}}</h1>
+        <br>
+        <div class="conter">
+            
+            <div class="card" style="width: 18rem; margin-right: 20px; background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="./static/img/p_1.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/vendedor/agregar-vendedor" class="card-link" style="color: black; text-decoration: none;">{{_('AGREGAR')}}</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin-right: 20px;background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="./static/img/p_2.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/vendedor/buscar-vendedor" class="card-link" style="color: black; text-decoration: none;">{{_('MODIFICAR')}}</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin-right: 20px;background-color: rgb(221, 221, 221);">
+                <img class="card-img-top" src="./static/img/p_3.png" alt="Card image cap">
+                <div class="card-body" style="text-align: center; font-size: 24px; font-weight: bold;">
+                  <a href="/vendedor/listar-vendedor" class="card-link" style="color: black; text-decoration: none;">{{_('LISTAR')}}</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {% endblock body %}
+</body>
+{% block footer %}{% endblock %}

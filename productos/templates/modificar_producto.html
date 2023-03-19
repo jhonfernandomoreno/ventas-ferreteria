@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block title %}{{titulo}}{% endblock title %}{{titulo}}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+    </header>
+    {% block body %}
+    <div class="fondo_agregar">
+        <h1 style="color: beige; text-align: center;">{{_('Modificar Producto')}}</h1>
+        <br>
+        <br>
+        <div class="container">
+            <form method="post" action="">
+                <table class="table">
+                    <tr>
+                        <td style="color: white;">{{_('Codigo')}}</td>
+                        <td><input type="number" name="id_prod" min="0" class="form-control" value="{{datos[0][0]}}"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Detalles del producto')}}</td>
+                        <td><input type="text" name="det_prod" class="form-control" value="{{datos[0][1]}}"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Cantidad')}}</td>
+                        <td><input type="text" name="cant_prod" min="0" class="form-control" value="{{datos[0][2]}}"></td>
+                    </tr>
+        
+                    <tr>
+                        <td style="color: white;">{{_('Precio Compra')}}</td>
+                        <td><input type="number" name="precio_compra" min="0" class="form-control" value="{{datos[0][3]}}"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Precio Venta')}}</td>
+                        <td><input type="number" name="precio_venta" min="0" class="form-control" value="{{datos[0][4]}}"></td>
+                    </tr>
+        
+                    <tr>
+                        <td >
+                            <input style="background-color: lightseagreen;" type="submit" name="submit" value="{{_('Actualizar')}}" class="btn btn-success">
+                        </td>
+                        <td style="text-align: right;">
+                            <a class="btn btn-danger" href="/productos/buscar-producto" role="button">{{_('Atras')}}</a>
+                        </td>
+                    </tr>
+                    
+                    {% if bandera == True %}
+                    <script>alert("El producto ha sido actualizado")</script>
+                    {% endif %}
+                </table>
+            </form>
+        </div>
+    </div>
+    {% endblock body %}
+</body>

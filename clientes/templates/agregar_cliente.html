@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block title %}{{titulo}}{% endblock title %}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+    </header>
+    {% block body %}
+    {% if mensaje == True %}
+    <script>alert('Cliente guardado exitosamente')</script>
+    {% endif %}
+    <div class="fondo_agregar_tra">
+        <h1 style="color: beige; text-align: center;">AGREGAR CLIENTES</h1>
+        <br>
+        <br>
+        <div class="container">
+            <form method="post" action="">
+                <table class="table">
+                    <tr>
+                        <td style="color: white;">{{_('Cedula')}}</td>
+                        <td><input type="number" name="codigo_cli" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Nombre')}}</td>
+                        <td><input type="text" name="nombre_cli" min="0" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">{{_('Direción')}}</td>
+                        <td><input type="text" name="direccion_cli" class="form-control"></td>
+                    </tr>
+        
+                    <tr>
+                        <td style="color: white;">{{_('Telefono')}}</td>
+                        <td><input type="number" name="telefono_cli" min="0" class="form-control"></td>
+                    </tr>
+        
+                    <tr>
+                        <td >
+                            <input type="submit" name="submit" value="{{_('Agregar')}}" class="btn btn-success">
+                        </td>
+                        <td style="text-align: right;">
+                            <a class="btn btn-danger" href="/clientes" role="button">{{_('Atras')}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    {% endblock body %}
+</body>

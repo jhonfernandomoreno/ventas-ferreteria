@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block title %}{{titulo}}{% endblock title %}
+<body>
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+    </header>
+    {% block body %}
+    <div class="fondo_listar_u">
+        <h1 style="color: beige; text-align: center;">{{_('LISTA DE PRODUCTO')}}</h1>
+        <div class="container">
+            <br>    
+            <table class="table table-dark table-striped table-bordered" id="example">
+                <thead style="background-color: orange; color: rgb(255, 255, 255);">
+                    <th>{{_('Codigo')}}</th>
+                    <th>{{_('Detalle de Producto')}}</th>
+                    <th>{{_('Cantidad')}}</th>
+                    <th>{{_('Precio Compra')}}</th>
+                    <th>{{_('Precio Venta')}}</th>
+                    <th>{{_('Opción')}}</th>
+                </thead>
+                
+                <tbody>
+                    {% for fila in dato %}
+                    <tr>
+                        {% for elem in fila %}
+                        <td>{{elem}}</td>
+                        {% endfor %}
+                        <td>
+                            <span style="font-size: 24px; margin-right: 20px;">
+                                <a style="color: blue;" href=""> <i class="fas fa-edit"></i> </a>
+                            </span>
+        
+                            <span style="font-size: 24px;">
+                                <a  style="color: orangered;" href=""> <i class="fas fa-trash-alt"></i> </a>
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="/productos/listar-productos/0">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/productos/listar-productos/1">2</a></li>
+                    <li class="page-item"><a class="page-link" href="/productos/listar-productos/2">3</a></li>
+                    <li class="page-item"><a class="page-link" href="/productos/listar-productos/3">4</a></li>
+                </ul>
+            </nav>
+            <br>
+            <div class="posicion">
+                <a href="/productos" class="button_atras">{{_('Atras')}}</a>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% endblock body %}
+</body>

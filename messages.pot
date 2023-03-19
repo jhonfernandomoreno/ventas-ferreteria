@@ -1,0 +1,575 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-03-18 22:47-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: clientes/templates/agregar_cliente.html:23
+#: clientes/templates/listar_cliente.html:18
+#: clientes/templates/modificar_cliente.html:20
+#: vendedores/templates/agregar_trabajador.html:21
+#: vendedores/templates/modificar_trabajador.html:21
+msgid "Cedula"
+msgstr ""
+
+#: clientes/templates/agregar_cliente.html:27
+#: clientes/templates/listar_cliente.html:19
+#: clientes/templates/modificar_cliente.html:24
+#: vendedores/templates/agregar_trabajador.html:25
+#: vendedores/templates/listar_trabajadores.html:20
+#: vendedores/templates/modificar_trabajador.html:25
+msgid "Nombre"
+msgstr ""
+
+#: clientes/templates/agregar_cliente.html:31
+msgid "Direción"
+msgstr ""
+
+#: clientes/templates/agregar_cliente.html:36
+#: clientes/templates/listar_cliente.html:21
+#: clientes/templates/modificar_cliente.html:33
+#: vendedores/templates/agregar_trabajador.html:38
+#: vendedores/templates/listar_trabajadores.html:23
+#: vendedores/templates/modificar_trabajador.html:38
+msgid "Telefono"
+msgstr ""
+
+#: clientes/templates/agregar_cliente.html:42
+#: productos/templates/agregar_producto.html:48
+#: vendedores/templates/agregar_trabajador.html:44
+msgid "Agregar"
+msgstr ""
+
+#: clientes/templates/agregar_cliente.html:45
+#: clientes/templates/listar_cliente.html:57
+#: clientes/templates/modificar_cliente.html:42
+#: factura/templates/factura_electronica.html:96
+#: productos/templates/agregar_producto.html:51
+#: productos/templates/listar_productos_u.html:56
+#: productos/templates/modificar_producto.html:46
+#: vendedores/templates/agregar_trabajador.html:47
+#: vendedores/templates/listar_trabajadores.html:61
+#: vendedores/templates/modificar_trabajador.html:47
+msgid "Atras"
+msgstr ""
+
+#: clientes/templates/clientes.html:14 dashboard/templates/dashboard.html:31
+#: dashboard/templates/dashboard_vendedor.html:26
+msgid "CLIENTES"
+msgstr ""
+
+#: clientes/templates/clientes.html:21 productos/templates/productos.html:17
+#: vendedores/templates/trabajadores.html:21
+msgid "AGREGAR"
+msgstr ""
+
+#: clientes/templates/clientes.html:29 productos/templates/productos.html:25
+#: vendedores/templates/trabajadores.html:27
+msgid "MODIFICAR"
+msgstr ""
+
+#: clientes/templates/clientes.html:37 productos/templates/productos.html:33
+#: vendedores/templates/trabajadores.html:33
+msgid "LISTAR"
+msgstr ""
+
+#: clientes/templates/listar_cliente.html:13
+msgid "LISTA DE CLIENTES"
+msgstr ""
+
+#: clientes/templates/listar_cliente.html:20
+#: vendedores/templates/agregar_trabajador.html:33
+#: vendedores/templates/listar_trabajadores.html:22
+msgid "Dirección"
+msgstr ""
+
+#: clientes/templates/listar_cliente.html:22
+#: productos/templates/listar_productos_u.html:23
+#: vendedores/templates/listar_trabajadores.html:24
+msgid "Opción"
+msgstr ""
+
+#: clientes/templates/modificar_cliente.html:13
+msgid "MODIFICAR CLIENTES"
+msgstr ""
+
+#: clientes/templates/modificar_cliente.html:28
+#: vendedores/templates/modificar_trabajador.html:33
+msgid "Direccion"
+msgstr ""
+
+#: clientes/templates/modificar_cliente.html:39
+#: productos/templates/modificar_producto.html:43
+#: vendedores/templates/modificar_trabajador.html:44
+msgid "Actualizar"
+msgstr ""
+
+#: clientes/templates/search_cli.html:10 factura/templates/search.html:10
+msgid "BUSCAR CLIENTE"
+msgstr ""
+
+#: clientes/templates/search_cli.html:33 factura/templates/search.html:33
+#: productos/templates/search_prod.html:33
+#: vendedores/templates/search_ven.html:33
+msgid "Buscar"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:26 productos/templates/productos.html:10
+msgid "PRODUCTOS"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:36
+#: vendedores/templates/trabajadores.html:14
+msgid "TRABAJADORES"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:41
+#: dashboard/templates/dashboard_vendedor.html:31
+msgid "FACTURACION"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:14
+msgid "FACTURACIÓN ELECTRONICA"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:20
+msgid "CONSTRUYE FACIL"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:23
+msgid "No. de Factura:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:27
+msgid "Fecha"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:35
+msgid "Cliente:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:39
+msgid "Dirección:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:43
+msgid "Telefono:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:47
+msgid "Cedula:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:55
+msgid "Cantidad:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:59
+msgid "Codigo:"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:69
+msgid "Finalizar Compra"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:76
+#: productos/templates/agregar_producto.html:34
+#: productos/templates/listar_productos_u.html:20
+#: productos/templates/modificar_producto.html:28
+msgid "Cantidad"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:77
+msgid "Descripción"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:78
+msgid "Val. Unitario"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:79
+msgid "Total"
+msgstr ""
+
+#: factura/templates/factura_electronica.html:88
+msgid "Valor Total"
+msgstr ""
+
+#: login/templates/inicio.html:8
+msgid "Iniciar Sesión"
+msgstr ""
+
+#: login/templates/inicio.html:11
+msgid "Usuario"
+msgstr ""
+
+#: login/templates/inicio.html:16
+msgid "Contraseña"
+msgstr ""
+
+#: login/templates/inicio.html:19
+msgid "Ingresar"
+msgstr ""
+
+#: productos/templates/agregar_producto.html:19
+msgid "AGREGAR PRODUCTOS"
+msgstr ""
+
+#: productos/templates/agregar_producto.html:26
+#: productos/templates/listar_productos_u.html:18
+#: productos/templates/modificar_producto.html:20
+msgid "Codigo"
+msgstr ""
+
+#: productos/templates/agregar_producto.html:30
+#: productos/templates/modificar_producto.html:24
+msgid "Detalles del producto"
+msgstr ""
+
+#: productos/templates/agregar_producto.html:39
+#: productos/templates/listar_productos_u.html:21
+#: productos/templates/modificar_producto.html:33
+msgid "Precio Compra"
+msgstr ""
+
+#: productos/templates/agregar_producto.html:43
+#: productos/templates/listar_productos_u.html:22
+#: productos/templates/modificar_producto.html:37
+msgid "Precio Venta"
+msgstr ""
+
+#: productos/templates/listar_productos_u.html:13
+msgid "LISTA DE PRODUCTO"
+msgstr ""
+
+#: productos/templates/listar_productos_u.html:19
+msgid "Detalle de Producto"
+msgstr ""
+
+#: productos/templates/modificar_producto.html:13
+msgid "Modificar Producto"
+msgstr ""
+
+#: productos/templates/search_prod.html:10
+msgid "BUSCAR PRODUCTO"
+msgstr ""
+
+#: templates/navbar.html:15
+msgid "Productos"
+msgstr ""
+
+#: templates/navbar.html:18 templates/navbar_vendedor.html:15
+msgid "Clientes"
+msgstr ""
+
+#: templates/navbar.html:21
+msgid "Trabajadores"
+msgstr ""
+
+#: templates/navbar.html:24 templates/navbar_vendedor.html:18
+msgid "Facturación"
+msgstr ""
+
+#: templates/navbar.html:27 templates/navbar_vendedor.html:21
+msgid "Acerca de"
+msgstr ""
+
+#: templates/navbar.html:30 templates/navbar_vendedor.html:24
+msgid "Salir"
+msgstr ""
+
+#: vendedores/templates/agregar_trabajador.html:14
+msgid "AGREGAR TRABAJADORES"
+msgstr ""
+
+#: vendedores/templates/agregar_trabajador.html:29
+#: vendedores/templates/listar_trabajadores.html:21
+#: vendedores/templates/modificar_trabajador.html:29
+msgid "Apellido"
+msgstr ""
+
+#: vendedores/templates/listar_trabajadores.html:14
+msgid "LISTA DE TRABAJADORES"
+msgstr ""
+
+#: vendedores/templates/modificar_trabajador.html:14
+msgid "MODIFICAR TRABAJADORES"
+msgstr ""
+
+#: vendedores/templates/search_ven.html:10
+msgid "BUSCAR VENDEDOR"
+msgstr ""
+
+#: venv/Lib/site-packages/click/_termui_impl.py:496
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/Lib/site-packages/click/_termui_impl.py:500
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1097
+msgid "Aborted!"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1282
+#: venv/Lib/site-packages/click/decorators.py:495
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1313
+#: venv/Lib/site-packages/click/core.py:1339
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1357
+msgid "Options"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1385
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/core.py:1398
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1605
+msgid "Commands"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1637
+msgid "Missing command."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1715
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2271
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2293
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/core.py:2734
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2764
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2777
+msgid "default: {default}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2790
+msgid "required"
+msgstr ""
+
+#: venv/Lib/site-packages/click/decorators.py:400
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/Lib/site-packages/click/decorators.py:464
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:43
+#: venv/Lib/site-packages/click/exceptions.py:79
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:71
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:120
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:122
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:178
+msgid "Missing argument"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:180
+msgid "Missing option"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:182
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:184
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:191
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:211
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:225
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/exceptions.py:261
+msgid "unknown error"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:268
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:473
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/shell_completion.py:315
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/Lib/site-packages/click/shell_completion.py:322
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:160
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:176
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:178
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:189
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:245
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:776
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:265
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:299
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/types.py:389
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/types.py:409
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:465
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:606
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:630
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:811
+msgid "file"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:813
+msgid "directory"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:815
+msgid "path"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:861
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:870
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:878
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:887
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:896
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:905
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:971
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+

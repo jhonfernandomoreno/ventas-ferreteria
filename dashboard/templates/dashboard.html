@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+<body >
+    <header>
+        {% if session['rol']=='admin' %}
+        {% include 'navbar.html' %}
+        {% else %}
+        {% include 'navbar_vendedor.html' %}
+        {% endif %}
+        {% block title %} CONSTRUYE FÁCIL{% endblock title %}
+    </header>
+    {% block body %}
+   
+    <div class="fondo_inicio">
+        <section>
+            <img src="./static/img/1.jpg">
+            <img src="./static/img/2.jpg">
+            <img src="./static/img/3.jpg">
+            <img src="./static/img/4.jpg">
+            <img src="./static/img/5.jpg">
+            <img src="./static/img/6.jpg">
+        </section>
+        <br>
+        <div class="conter">
+            <button  class="b1" onclick="location.href='productos'">
+                <span>
+                    {{_('PRODUCTOS')}}
+                </span>
+            </button>
+            <button  class="b1" onclick="location.href='clientes'">
+                <span>
+                    {{_('CLIENTES')}}
+                </span>
+            </button>
+            <button  class="b1" onclick="location.href='/vendedor'">
+                <span>
+                    {{_('TRABAJADORES')}}
+                </span>
+            </button>
+            <button  class="b1" onclick="location.href='/facturacion/buscar-cliente'">
+                <span>
+                    {{_('FACTURACION')}}
+                </span>
+            </button>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,224L26.7,234.7C53.3,245,107,267,160,256C213.3,245,267,203,320,208C373.3,213,427,267,480,293.3C533.3,320,587,320,640,288C693.3,256,747,192,800,181.3C853.3,171,907,213,960,202.7C1013.3,192,1067,128,1120,128C1173.3,128,1227,192,1280,192C1333.3,192,1387,128,1413,96L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+                <text x="10" y="318" font-weight="bold" fill="#F4D03F" stroke="#515A5A" stroke-width=2 
+                    font-family="Verdana" font-size="20px">CONSTRUYE FÁCIL {{rol}} </text>
+                <text x="830" y="225" fill="black" font-family="Verdana" font-size="16px">Horario de atención:</text>
+                <text x="830" y="245" fill="black" font-family="Verdana" font-size="16px">Lunes a Viernes en Horario de 8:00am - 12:00m y de 2:00pm - 6:00pm</text>
+                        
+        </svg>
+
+    </div>
+    {% endblock%} 
+</body>
+{% block footer %}{% endblock %}
